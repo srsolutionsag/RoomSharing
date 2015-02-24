@@ -1,0 +1,338 @@
+//
+// German Language File for RoomSharingObject Plugin
+//
+
+<!-- language file start -->
+add_room#:#Raum hinzufügen
+add_wrong_attribute#:#Es wurden fehlerhafte Daten für die Attribute gesetzt.
+add_wrong_attribute_count#:#Es wurden fehlerhafte Daten für die Attributanzahl gesetzt.
+amount#:#Anzahl
+appointments#:#Termine
+at_most#:#Höchstens
+attribute_already_exists#:#Attribut ist bereits vorhanden.
+attributes#:#Attribute
+attributes_change_not_allowed#:#Sie sind nicht berechtigt, die Attribute zu verwalten.
+attributes_for_bookings#:#Buchungsattribute
+attributes_for_bookings_desc#:#Buchungsattribute können hier festgelegt werden.
+attributes_for_rooms#:#Raumattribute
+attributes_for_rooms_desc#:#Raumattribute können hier festgelegt werden.
+back_to_floor_plans#:#Zurück zu den Gebäudeplänen
+back_to_rooms#:#Zurück zu den Räumen
+between#:#Zwischen
+booking#:#Buchung
+booking_add#:#Buchung hinzufügen
+booking_add_error#:#Buchung konnte nicht hinzugefügt werden.
+booking_added#:#Buchung hinzugefügt
+booking_back#:#Zurück zu den Buchungen
+booking_cancel#:#Stornieren
+booking_confirm#:#Sind Sie sicher, dass Sie die folgende Buchung stornieren wollen?
+booking_confirm_cancel#:#Stornieren
+booking_deleted#:#Buchung storniert
+booking_doesnt_exist#:#Diese Buchung existiert nicht (mehr)
+booking_edit#:#Bearbeiten
+booking_edit_cancel#:#Abbrechen
+booking_in_edit#:#(Bearbeitungsmodus)
+booking_in_show#:#Buchung für
+booking_lower_priority_canceled#:#Buchungen, welche Zeit- und Raumüberschneidungen mit erstellten Buchungen aufweisen und von Benutzern mit niedrigerer Priorität erstellt worden sind sowie eigene Buchungen, wurden automatisch storniert. Die Benutzer der betroffenen Buchungen wurden darüber informiert.
+booking_no_cancel_ids#:#Geben Sie mindestens eine Buchung zum Stornieren an.
+booking_save#:#Buchung speichern
+booking_sequence_deleted#:#Diese Buchung und alle folgenden Buchungen wurden gelöscht.
+booking_success_edit#:#Buchung erfolgreich bearbeitet
+booking_time_bigger_max_book_time#:#Der Buchungszeitraum ist größer als die maximal zulässige Buchungsdauer dieses Raumbuchungssystems.
+bookings#:#Buchungen
+bookings_confirm#:#Sind Sie sicher, dass Sie die folgenden Buchungen stornieren wollen?
+bookings_deleted#:#Buchungen storniert
+bookings_were_updated#:#Buchung(en) wurde(n) aktualisiert.
+cancel#:#Abbrechen
+choose_action#:#Wählen Sie die gewünschte Aktion:
+choose_attribute#:#Wählen Sie ein vorhandenes Attribut
+class_id_incorrect#:#Klassen-ID ist nicht korrekt
+class_not_created#:#Klasse konnte nicht erstellt werden
+comment#:#Kommentar
+content#:#Inhalt
+course#:#Studiengang
+create_attribute#:#Neues Attribut anlegen
+create_attribute_info#:#Mit dieser Option können neue Attribute angelegt werden.
+current_rooms_user_agreement#:#Aktuelle Raumnutzungsordnung
+daVinci_import#:#Import
+daVinci_import_bookings#:#Buchungen importieren
+daVinci_import_button#:#Importieren
+daVinci_import_default_cap#:#Standardmäßige Anzahl an Sitzplätzen
+daVinci_import_error_no_room_plu#:#Buchungen konnten nicht angelegt werden, da die hierfür angegebenen Räume nicht existieren.
+daVinci_import_error_no_room_sing#:#Buchung konnte nicht angelegt werden, da der hierfür angegebene Raum nicht existiert.
+daVinci_import_file#:#daVinci Schuldatentransferdatei hochladen
+daVinci_import_message_appointment#:#Buchung erkannt.
+daVinci_import_message_appointments#:#Buchungen erkannt.
+daVinci_import_message_end#:#Vorgang beendet.
+daVinci_import_message_room#:#Raum erkannt.
+daVinci_import_message_rooms#:#Räume erkannt.
+daVinci_import_message_start#:#Die daVinci-Datei wird eingelesen und verarbeitet. Dieser Vorgang kann einige Minuten dauern. Bitte warten...
+daVinci_import_rooms#:#Räume importieren
+daVinci_import_succ_booking_created#:#Buchung wurde neu angelegt.
+daVinci_import_succ_bookings_created#:#Buchungen wurden neu angelegt.
+daVinci_import_succ_room_created#:#Raum wurde neu angelegt.
+daVinci_import_succ_rooms_created#:#Räume wurden neu angelegt.
+daVinci_import_tag#:#daVinci Buchung
+daVinci_import_title#:#daVinci Daten importieren
+date#:#Termin
+datefrom_bigger_dateto#:#&quot;Von&quot; ist später oder gleich &quot;bis&quot;
+datefrom_is_earlier_than_now#:#&quot;Von&quot; liegt in der Vergangenheit
+delete_attribute#:#Vorhandenes Attribut löschen
+delete_booking_attribute_info#:#Mit dieser Option können vorhandene Attribute gelöscht werden. <br>Entfernen eines Attributs verursacht die Aktualisierung der damit verbundenen Buchungen.
+delete_room_attribute_info#:#Mit dieser Option können vorhandene Attribute gelöscht werden. <br>Entfernen eines Attributs verursacht die Aktualisierung der damit verbundenen Räume.
+description#:#Beschreibung
+edit#:#Bearbeiten
+edit_attributes#:#Änderung der Attribute
+edit_properties#:#Einstellungen bearbeiten
+error_in_selected_sequencebooking#:#Fehlerhafte Eingabe bei Pflichtfeldern der Serienbuchung
+export_pdf#:#.pdf exportieren
+fake_attribute_id_provided#:#Es wurden fehlerhafte Daten übermittelt. Versuchen Sie es bitte nochmal.
+floor_plan_title_is_already_taken#:#Titel des Gebäudeplans ist bereits vergeben
+floor_plans_add#:#Gebäudeplan hinzufügen
+floor_plans_added#:#Gebäudeplan hinzugefügt
+floor_plans_delete#:#Gebäudeplan löschen
+floor_plans_deleted#:#Gebäudeplan erfolgreich gelöscht
+floor_plans_deleted_error#:#Fehler beim Löschen des Gebäudeplans
+floor_plans_edit#:#Gebäudeplan bearbeiten
+floor_plans_edited#:#Gebäudeplan erfolgreich aktualisiert
+floor_plans_filetypes#:#Unterstützte Dateiformate:
+floor_plans_keep#:#Gebäudeplan beibehalten
+floor_plans_keep_info#:#Der bisherige Gebäudeplan wird beibehalten
+floor_plans_replace#:#Gebäudeplan ersetzen
+floor_plans_replace_info#:#Der bisherige Gebäudeplan wird durch einen neuen ersetzt
+floor_plans_room_assoc#:#Die Raum-Gebäudeplan Zuordnungen folgender Räume werden dabei gelöscht:
+floor_plans_show#:#Gebäudepläne anzeigen
+floor_plans_upload_error#:#Fehler beim Hochladen des Gebäudeplans. Die mögliche Ursache ist die Verwendung eines nicht unterstützten Dateiformats.
+found#:#gefunden
+from#:#von
+illegal_room_min_max_alloc#:#Es wurde eine falsche Anzahl der Sitzplätze (min/max) angegeben.
+is_offline#:#ist offline
+leave#:#Austreten
+mail_booking_creator_linktext#:#Sie finden ihre Buchung unter folgendem Link:
+mail_booking_creator_message#:#Sie haben erfolgreich einen Raum gebucht. Folgendes wurde gebucht:
+mail_booking_creator_subject#:#Sie haben einen Raum gebucht.
+mail_booking_participant_message#:#jemand hat eine Raumbuchung erstellt und Sie wurden als Teilnehmer eingetragen. Sie sind jetzt Teilnehmer bei folgender Buchung:
+mail_booking_participant_subject#:#Jemand hat Sie bei einer Raumbuchung als Teilnehmer eingetragen.
+mail_cancellation_creator_message#:#Ihre Raumbuchung wurde storniert. Der folgende Raum ist jetzt wieder frei:
+mail_cancellation_creator_subject#:#Ihre Raumbuchung wurde storniert.
+mail_cancellation_participant_message#:#eine Raumbuchung, bei der Sie als Teilnehmer eingetragen waren, wurde storniert. Folgende Buchung ist storniert worden:
+mail_cancellation_participant_subject#:#Eine Raumbuchung, bei der Sie als Teilnehmer eingetragen waren, wurde storniert.
+mail_cancellation_reason_higher_priority#:#Überschrieben durch Buchung von einem Benutzer mit höherer Priorität.
+mail_cancellation_reason_manually#:#Manuelle Stornierung durch den Benutzer.
+mail_cancellation_reason_prefix#:#Die Buchung wurde aus folgendem Grund storniert:
+mail_participation_cancel_message#:#Sie sind aus einer Buchung ausgetreten. Sie nehmen nun nicht mehr an der folgenden Buchung teil:
+mail_participation_cancel_subject#:#Sie sind aus einer Buchung ausgetreten.
+mail_participation_creator_message#:#ein Teilnehmer nimmt nicht mehr an Ihrer Buchung teil. Folgender Teilnehmer ist ausgetreten:
+mail_participation_creator_subject#:#Ein Teilnehmer nimmt nicht mehr an Ihrer Buchung teil.
+mail_removing participant_message#:#Sie wurden vom Ersteller der Raumbuchung als Teilnehmer ausgetragen. Es betraf folgende Buchung:
+mail_removing participant_subject#:#Sie wurden als Teilnehmer von einer Buchung ausgetragen.
+mail_room_changed_message#:#ein Raum, den Sie gebucht haben wurde verändert. Dies betrifft die folgenden Buchungen von Ihnen:
+mail_room_changed_subject#:#Ein Raum, den Sie gebucht haben wurde verändert.
+mail_sequencebook_creator_message#:#Sie haben eine Serienbuchung für einen Raum erstellt. Der Raum ist nun zu folgenden Zeiten gebucht:
+mail_sequencebook_creator_subject#:#Sie haben eine Serienbuchung für einen Raum erstellt.
+mail_update_booking_creator_message#:#Sie haben erfolgreich eine Buchung aktualisiert. Sie wurde auf folgendes geändert:
+mail_update_booking_creator_subject#:#Sie haben eine Buchung aktualisiert.
+mail_update_booking_participant_message#:#Eine Buchung wurde aktualisiert, bei der Sie als Teilnehmer eingetragen sind. Folgendes wurde geändert:
+mail_update_booking_participant_subject#:#Eine Buchung, in der Sie als Teilnehmer eingetragen sind, wurde aktualisiert.
+manage#:#Verwalten
+max_book_time#:#Maximale Dauer einer Buchung
+missing_agreement_entries#:#Die Raumnutzungsvereinbarung wurde nicht akzeptiert.
+missing_required_entries#:#Angaben unvollständig oder ungültig
+module#:#Modul
+must_be_unique#:#Attributname muss eindeutig sein!
+name_of_new_attribute#:#Name des neuen Attributs
+needed_seats#:#Benötigte Sitzplätze
+new_attribute_name#:#Neuer Name des Attributs
+no_delete_permission#:#Keine Berechtigung, diese Buchung zu löschen
+no_id_submitted#:#Keine oder nicht numerische ID übergeben
+no_match_for#:#Keine Ergebnisse für
+not_yet_implemented#:#Diese Funktion wurde noch nicht implementiert.
+obj_xrs#:#RoomSharing
+objs_xrs#:#RoomSharing Pools
+on#:#Am
+participants#:#Teilnehmer
+participants_list#:#Teilnehmerliste
+participations#:#Teilnahmen
+participations_back#:#Zurück zu den Teilnahmen
+participations_confirm#:#Sind Sie sicher, dass Sie folgende Buchung(en) verlassen möchten?
+participations_confirm_leave#:#Buchung(en) verlassen
+participations_left#:#Buchung(en) wurden verlassen
+participations_no_leave_ids#:#Markieren Sie bitte mindestens eine zu verlassende Buchung.
+person_responsible#:#Verantwortlicher
+plan#:#Plan
+plural_field_input_value_too_high_begin#:#Die Werte für die Felder
+plural_field_input_value_too_high_end#:#sind höher als der maximal verfügbare Wert und wurden daher ignoriert bzw. der Filter auf den letzten gültigen Zustand zurückgesetzt.
+plural_field_input_value_too_low_begin#:#Die Werte für die Felder
+plural_field_input_value_too_low_end#:#sind kleiner als 0 und wurden daher ignoriert bzw. der Filter auf den letzten gültigen Zustand zurückgesetzt.
+pool#:#Roomsharingpool
+pools#:#Roomsharingpools
+privileges#:#Privilegien
+privileges_class_already_exists#:#Es existiert bereits eine Klasse mit dem gleichen Namen. Bitte wählen Sie einen anderen Klassennamen.
+privileges_class_edit#:#Klasse bearbeiten
+privileges_class_new#:#Neue Klasse anlegen
+privileges_class_not_available#:#Keine Klassen vorhanden
+privileges_confirm_class_lock#:#Klassenprivilegien sperren
+privileges_confirm_class_lock_info#:#Die folgenden Einstellungsänderungen werden vorgenommen:<br /><br />- Alle Privilegien für diese Klassen werden gesperrt.<br />- Benutzer, die einer gesperrten Klasse über Rollen- oder Direktzuweisung zugeordnet sind, verfügen infolgedessen über keinerlei Privilegien.
+privileges_confirm_class_lock_question#:#Möchten Sie wirklich die Privilegien folgender Klassen sperren?
+privileges_confirm_class_self_lock_of#:#Sie beabsichtigen die Sperrung der Privilegien mindestens einer Klasse, der Sie selbst zugeordnet sind.<br />Unter Umständen sperren Sie somit Ihre eigenen Privilegien und nur ein weiterer Benutzer mit dem Privileg, andere Privilegien zu verändern, oder der Besitzer des Pools kann die Privilegien wiederherstellen.<br />Dies betrifft die Sperrung folgender, Ihnen zugeordneter Klassen:
+privileges_confirm_privilege_revoking#:#Privilegien entziehen
+privileges_confirm_privilege_revoking_info#:#Sie beabsichtigen das Privileg &quot;Privilegien aufrufen&quot; und/oder das Privileg &quot;Privilegien bearbeiten&quot; mindestens einer Klasse zu entziehen, der Sie selbst zugeordnet sind. Wenn Sie fortfahren kann nur ein weiterer Benutzer mit dem Privileg, andere Privilegien zu verändern, oder der Besitzer des Pools besagte Privilegien wiederherstellen.
+privileges_confirm_privilege_revoking_question#:#Möchten Sie wirklich den folgenden, Ihnen zugeordneten Klassen die Privilegien &quot;Privilegien bearbeiten&quot; und/oder &quot;Privilegien bearbeiten&quot; entziehen?
+privileges_copy_privileges#:#Privilegien kopieren
+privileges_lock#:#Privilegien sperren
+privileges_lock_confirm_back#:#Zurück zu den Privilegien
+privileges_lock_desc#:#Sperrt die Privilegien für die Klasse
+privileges_role_assignment#:#Rollenzuordnung
+privileges_settings#:#Privilegieneinstellungen
+rename_attribute#:#Vorhandenes Attribut umbenennen
+rename_attribute_info#:#Mit dieser Option können vorhandene Attribute umbenannt werden.
+results_for#:#Ergebnisse für
+room#:#Raum
+room_add#:#Raum hinzufügen
+room_added#:#Raum wurde hinzugefügt
+room_agreement_filetypes#:#Unterstützte Dateiformate:
+room_agreement_upload_error#:#Fehler beim Hochladen der Raumnutzungsordnung. Die mögliche Ursache liegt in der Verwendung eines nicht unterstützten Dateiformats.
+room_already_booked#:#Der Raum ist in dem Zeitraum bereits gebucht.
+room_attributes#:#Raumattribute
+room_attributes_info#:#Für die Attributwerte können ganze Zahlen ab 0 eingegeben werden. Bei keiner Angabe werden die jeweiligen Zuweisungen aufgelöst.
+room_back#:#Zurück zur Raumansicht
+room_book#:#Buchen
+room_create_failed#:#Der Raum konnte nicht angelegt werden.
+room_date_recurrence#:#Serientermin
+room_delete#:#Sind Sie sicher, dass Sie folgenden Raum löschen möchten?
+room_delete_booking#:#Die folgende Anzahl an Buchungen ist von der Löschung des Raumes betroffen:
+room_delete_success#:#Raum erfolgreich gelöscht
+room_edit#:#Editieren
+room_file_id#:#Lageplan
+room_floor_plans#:#Gebäudeplan
+room_max_alloc#:#Maximale Anzahl der Sitzplätze
+room_max_allocation_exceeded#:#Maximale Anzahl der Sitzplätze überschritten
+room_min_alloc#:#Minimale Anzahl der Sitzplätze
+room_min_allocation_not_reached#:#Minimale Anzahl der Sitzplätze nicht erreicht
+room_name#:#Raumbezeichnung
+room_name_missing#:#Raumbezeichnung fehlt
+room_name_occupied#:#Raumbezeichnung ist schon vergeben
+room_no_assign#:#Keine Zuordnung
+room_occupation#:#Belegungsplan
+room_occupation_title#:#Belegungsplan von Raum
+room_prop_description#:#Der ausgewählte Raum besitzt folgende Eigenschaften:
+room_properties#:#Raumeigenschaften
+room_public_booking#:#Nutzername in Buchung öffentlich anzeigen
+room_type#:#Raumtyp
+rooms#:#Räume
+rooms_user_agreement#:#Raumnutzungsordnung
+rooms_user_agreement_accept#:#Raumnutzungsordnung akzeptieren
+rooms_were_updated#:#Raum/Räume wurde(n) aktualisiert.
+roomsharing_plugin_config_not_required#:#Es wird keine Konfiguration benötigt
+roomsharing_plugin_configuration#:#RoomSharing Plugin Konfiguration
+save#:#Speichern
+saving_invoked#:#Speicherprozess wurde durchgeführt. Bitte beachten Sie, dass dieser Roomsharing Pool keine Einträge in der Datenbank vornimmt.
+search#:#Suchen
+search_back#:#Zurück zu den Suchergebnissen
+search_range_to_small#:#Der angegebene Zeitraum ist zu klein
+search_time_in_past#:#Die eingegebene Zeit liegt in der Vergangenheit
+seats#:#Sitzplätze
+semester#:#Semester
+seq_booking_added#:#Serienbuchung hinzugefügt
+setting_1#:#Einstellung 1
+setting_2#:#Einstellung 2
+settings#:#Einstellungen
+singular_field_input_value_too_high_begin#:#Der Wert für das Feld
+singular_field_input_value_too_high_end#:#ist höher als der maximal verfügbare Wert und wurde daher ignoriert bzw. der Filter auf den letzten gültigen Filter zurückgesetzt.
+singular_field_input_value_too_low_begin#:#Der Wert für das Feld
+singular_field_input_value_too_low_end#:#ist kleiner als 0 und wurde daher ignoriert bzw. der Filter auf den letzten gültigen Filter zurückgesetzt.
+status#:#Status
+subject#:#Betreff
+time_range#:#Zeitbereich
+title#:#Titel
+to#:#bis
+user#:#Benutzer
+user_id#:#Benutzer-Id
+user_name#:#Benutzername
+value#:#Wert
+view#:#Ansicht
+warning_missing_rooms#:#Es sind momentan keine Räume vorhanden. Um den Roomsharingpool nutzen zu können, müssen zuerst Räume angelegt werden.
+week#:#Woche
+week_capitalised#:#Woche
+wrong_attribute_name_provided#:#Der Name des Attributs ist ungültig
+wrong_input#:#Es wurden falsche Angaben getätigt
+xrs_add#:#RoomSharing hinzufügen
+xrs_delete#:#RoomSharing löschen
+xrs_edit_permission#:#Rechte bearbeiten
+xrs_new#:#Neues RoomSharing
+xrs_read#:#Lesezugriff auf RoomSharing
+xrs_visible#:#RoomSharing ist sichtbar
+xrs_write#:#RoomSharing bearbeiten
+
+// Privileges
+access_appointments#:#Termine aufrufen
+access_appointments_description#:#Zugang zum Reiter &quot;Termine&quot;
+access_floorplans#:#Gebäudepläne aufrufen
+access_floorplans_description#:#Zugang zum Reiter &quot;Gebäudepläne&quot;
+access_privileges#:#Privilegien aufrufen
+access_privileges_description#:#Zugang zum Reiter &quot;Privilegien&quot;
+access_rooms#:#Räume aufrufen
+access_rooms_description#:#Zugang zum Reiter &quot;Räume&quot;
+access_search#:#Suche aufrufen
+access_search_description#:#Zugang zum Reiter &quot;Suche&quot;
+access_settings#:#Einstellungen aufrufen
+access_settings_description#:#Zugang zum Reiter &quot;Einstellungen&quot;
+add_participant#:#Teilnehmer hinzufügen
+add_participant_description#:#Teilnehmer zu einer Buchung hinzufügbar
+add_unlimited_bookings#:#Zeitlich unbegrenzte Buchungen
+add_unlimited_bookings_description#:#Unbegrenzt lange buchen
+appointments_privileges_description#:#Hier sind die Privilegien für die Termine, die sowohl Buchungen als auch Teilnahmen umfassen, aufgeführt.
+cancel_lower_priority#:#Niedrigere Klassenpriorität stornieren
+cancel_lower_priority_description#:#Fremde Buchungen, die von Benutzern mit einer niedrigeren Klassenpriorität erstellt wurden, stornierbar
+class#:#Klasse
+class_added_successfully#:#Klasse erfolgreich hinzugefügt
+class_assignment_successful#:#Benutzer wurde(n) hinzugefügt.
+class_back#:#Zurück zu den Klasseneigenschaften
+class_confirm_deletion#:#Klasse löschen
+class_confirm_deletion_header#:#Möchten Sie wirklich die ausgewählte Klasse löschen?
+class_deassignment_successful#:#Benutzer wurde(n) entfernt.
+class_deletion_successful#:#Klasse wurde erfolgreich gelöscht
+class_priority#:#Klassenpriorität
+class_user_already_assigned#:#Die ausgewählten Benutzer sind dieser Klasse bereits zugeordnet.
+create#:#Erstellen
+create_class#:#Klasse anlegen
+create_class_description#:#Neue Klassen anlegbar
+create_delete_rooms_description#:#Vorhandene Räume können gelöscht werden
+create_edit_delete#:#Erstellen, Bearbeiten, Stornieren
+create_edit_delete_booking_attributes#:#Attribute administrierbar
+create_edit_delete_booking_attributes_description#:#Buchungsattribute sind erstell-, bearbeit- und löschbar
+create_edit_delete_description#:#Eigene Buchungen anleg-, bearbeit- und stornierbar
+create_edit_delete_room_attributes#:#Attribute administrierbar
+create_edit_delete_room_attributes_description#:#Raumattribute sind erstell-, bearbeit- und löschbar
+create_edit_rooms_description#:#Vorhandene Räume können bearbeitet werden
+create_floorplans_description#:#Neue Gebäudepläne erstellbar
+create_rooms_description#:#Neue Räume erstellbar
+delete#:#Löschen
+delete_class#:#Klasse löschen
+delete_class_description#:#Vorhandene Klassen löschbar
+delete_floorplans_description#:#Vorhandene Gebäudepläne können gelöscht werden
+edit#:#Bearbeiten
+edit_class#:#Klasse bearbeiten
+edit_class_description#:#Vorhandene Klassen bearbeitbar
+edit_floorplans_description#:#Vorhandene Gebäudepläne können bearbeitet werden
+edit_privileges#:#Privilegien bearbeiten
+edit_privileges_description#:#Privilegien aller Klassen bearbeiten
+floorplans#:#Gebäudepläne
+floorplans_privileges_description#:#Hier sind die Privilegien für die Gebäudepläne aufgeführt.
+general_privileges#:#Allgemeine Privilegien
+general_privileges_description#:#Hier sind die allgemeinen Privilegien aufgeführt.
+import_bookings_from_external_file#:#Import von Buchungen aus externen Dateien
+import_bookings_from_external_file_description#:#Import von Buchungen aus externen Dateien ermöglichen
+lock_privileges#:#Privilegien sperren
+lock_privileges_description#:#Privilegien aller Klassen sperrbar, sodass diese Klassen infolge über keinerlei Privilegien verfügen
+no_permission#:#Sie besitzen kein Privileg um auf dieses Objekt zuzugreifen
+no_permission_for_action#:#Sie besitzen kein Privileg um diese Aktion durchzuführen
+notification_tunable#:#Benachrichtungseinstellungen
+notification_tunable_description#:#Benachrichtigungen sind ein- und abschaltbar
+rooms_privileges_description#:#Hier sind die Privilegien für die Räume aufgeführt.
+see_booking_of_rooms#:#Buchungen einsehen
+see_booking_of_rooms_description#:#Buchungen von einzelnen Räumen in Detailansicht einsehbar
+see_non_public_booking_information#:#Nicht öffentliche Buchungen einsehen
+see_non_public_booking_information_description#:#Informationen von nicht öffentlichen Buchungen einsehbar
+sequence_bookings#:#Serienbuchungen
+sequence_bookings_addable#:#Serienbuchungen anlegbar

@@ -1,0 +1,36 @@
+<tr style="font-size: 75%" class="{CSS_ROW}">
+	<!-- BEGIN class_lock -->
+	<td class="std">
+		<p style="margin: 0px;margin-left:.25in;text-indent:-.25in">
+			<input type="checkbox" name="lock[{LOCK_CLASS_ID}]" id="lock_{LOCK_CLASS_ID}" value="1" {LOCK_DISABLED} {LOCK_CHECKED}/>
+			<label for="lock_{LOCK_CLASS_ID}" title="{TXT_LOCK_LONG}"><font class="bold">{TXT_LOCK}</font></label>
+		</p> 
+	</td>
+	<!-- END class_lock -->	
+	<!-- BEGIN section_info -->
+	<td class="std" colspan="7">
+			<br />
+			<font class="bold">{SECTION_TITLE}</font>
+			<div class="il_Description">
+				{SECTION_DESC}
+			</div>
+		</div>
+	</td>
+	<!-- END section_info -->
+	<!-- BEGIN class_td -->
+	<td class="std" style="vertical-align: top">
+		<p style="margin: 0px;margin-left:.25in;text-indent:-.25in">
+			<input type="checkbox" name="priv[{PRIV_CLASS_ID}][{PRIV_ID}]" id="priv_{PRIV_CLASS_ID}_{PRIV_ID}" value="1" {PRIV_DISABLED} {PRIV_CHECKED} />
+			<label for="priv_{PRIV_CLASS_ID}_{PRIV_ID}" title="{TXT_PRIV_LONG}">{TXT_PRIV}</label>
+		</p>
+	</td>
+	<!-- END class_td -->
+	<!-- BEGIN class_select_all -->
+	<td class="std">
+		<p style="margin: 0px;margin-left:.25in;text-indent:-.25in">
+			<input type="checkbox" id="select_{JS_CLASS_ID}_{JS_SUBID}" {PRIV_DISABLED} onclick="setCheckboxes('{JS_FORM_NAME}','{JS_CLASS_ID}','{JS_SUBID}',{JS_ALL_PRIVS}); return true;" />
+			<label for="select_{JS_CLASS_ID}_{JS_SUBID}"><font class="bold">{TXT_SEL_ALL}</font></label>
+		</p>
+	</td>
+	<!-- END class_select_all -->
+</tr>

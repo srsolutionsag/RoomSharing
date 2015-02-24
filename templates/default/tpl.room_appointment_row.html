@@ -1,0 +1,47 @@
+<tr class="{CSS_ROW} small">
+	<td class="std">
+		<input type="checkbox" name="{CHECKBOX_NAME}[]" value="{CHECKBOX_ID}" {CHECKBOX_CHECKED} />
+	</td>
+    <!-- BEGIN date_recurrence -->
+    <td class="std">
+		<img src="{IMG_RECURRENCE_PATH}" alt="{IMG_RECURRENCE_ALT}" title="{IMG_RECURRENCE_TITLE}" /> {IMG_RECURRENCE_ALT}
+	</td>
+	<!-- END date_recurrence -->
+	<!-- BEGIN date -->
+	<td class="std">
+		<a href="{HREF_DATE}">{TXT_DATE}</a>
+	</td>
+	<!-- END date -->
+    <!--  BEGIN room -->
+	<td class="std">
+		<a href="{HREF_ROOM}">{TXT_ROOM}</a>
+	</td>
+	<!--  END room -->
+	<!--  BEGIN subject -->
+	<td class="std">
+		{TXT_SUBJECT}
+	</td>
+	<!--  END subject -->
+	<td class="std">
+        <!--  BEGIN participants -->
+		<a href="{HREF_PROFILE}">{TXT_USER}</a>{TXT_SEPARATOR}
+        <!--  END participants -->
+	</td>
+	<!--  BEGIN comment -->
+	<td class="std">
+		{TXT_COMMENT}
+	</td>
+	<!--  END comment -->
+    <!-- BEGIN additional -->
+	<td class="std">
+		{TXT_ADDITIONAL}
+	</td>
+	<!-- END additional -->
+	<td class="std">
+        <!-- BEGIN actions -->
+		<div class="ilFloatRight">
+            <a class="il_ContainerItemCommand2" href="{LINK_ACTION}">{LINK_ACTION_TXT}</a>&nbsp;&nbsp;
+		</div> {LINK_ACTION_SEPARATOR}
+        <!-- END actions -->
+	</td>
+</tr>

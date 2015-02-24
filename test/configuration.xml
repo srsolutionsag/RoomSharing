@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- see http://www.phpunit.de/wiki/Documentation for further details-->
+
+<phpunit colors="true">
+    <!-- filter options for the code coverage analysis -->
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true"
+                   processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">..\classes</directory>
+            <exclude>
+                <directory suffix="GUI.php">..\classes</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <!-- uncomment the following lines in case you want NetBeans to exclude all selenium acceptance
+    tests which in return will allow you test and make a code coverage analysis for the whole
+    project with just the push of a button-->
+    <!-- <groups>
+        <exclude>
+            <group>acceptance</group>
+        </exclude>
+    </groups> -->
+    <php>
+        <!-- Name of the RoomSharing Object -->
+        <var name="rssObjectName" value="MeinRoomsharingPool"/>
+    </php>
+</phpunit>
