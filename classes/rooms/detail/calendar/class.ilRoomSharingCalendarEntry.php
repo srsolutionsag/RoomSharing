@@ -7,86 +7,86 @@ require_once('Services/Calendar/classes/class.ilCalendarEntry.php');
 /**
  * Model for a calendar entry displayed in ilRoomSharingWeekView.
  *
- * @author Tim Röhrig
+ * @author  Tim Röhrig
  * @version $Id$
  *
  * @ingroup ServicesCalendar
  */
-class ilRoomSharingCalendarEntry extends ilCalendarEntry
-{
+class ilRoomSharingCalendarEntry extends ilCalendarEntry {
+
 	private $ilRoomsharingDatabase;
+
 
 	/**
 	 * Constructor.
 	 *
 	 * @param int cal_entry id
 	 */
-	public function __construct($a_id = 0)
-	{
+	public function __construct($a_id = 0) {
 		$this->ilRoomsharingDatabase = new ilRoomsharingDatabase(0);
 
-		if ($this->entry_id = $a_id)
-		{
+		if ($this->entry_id = $a_id) {
 			$this->read();
 		}
 	}
 
+
 	/**
 	 * Clones instance.
 	 */
-	public function __clone()
-	{
+	public function __clone() {
 		$this->entry_id = NULL;
 	}
+
 
 	/**
 	 * Delete entry is forbidden.
 	 *
 	 * @param integer $a_entry_id
+	 *
 	 * @return boolean
 	 */
-	public static function _delete($a_entry_id)
-	{
+	public static function _delete($a_entry_id) {
 		return false;
 	}
+
 
 	/**
 	 * Update is forbidden.
 	 *
 	 * @return boolean
 	 */
-	public function update()
-	{
+	public function update() {
 		return false;
 	}
+
 
 	/**
 	 * Save one entry is forbidden.
 	 *
 	 * @return boolean
 	 */
-	public function save()
-	{
+	public function save() {
 		return false;
 	}
+
 
 	/**
 	 * Delete is forbidden.
 	 *
 	 * @return boolean
 	 */
-	public function delete()
-	{
+	public function delete() {
 		return false;
 	}
+
 
 	/**
 	 * Read all details for calendarEntry from database.
 	 *
 	 * @access protected
 	 */
-	protected function read()
-	{
+	protected function read() {
 		$info = $this->ilRoomsharingDatabase->getInfoForBooking($this->getEntryId());
 
 		//$this->setLastUpdate(new ilDateTime($row->last_update, IL_CAL_DATETIME, 'UTC'));
@@ -106,27 +106,27 @@ class ilRoomSharingCalendarEntry extends ilCalendarEntry
 		$this->end = $info['end'];
 	}
 
+
 	/**
 	 * Write users responsible for a milestone is forbidden.
 	 *
 	 * @param array $a_users
+	 *
 	 * @return boolean
 	 */
-	function writeResponsibleUsers($a_users)
-	{
+	function writeResponsibleUsers($a_users) {
 		return false;
 	}
+
 
 	/**
 	 * Read responsible users is forbidden.
 	 *
 	 * @return boolean
 	 */
-	function readResponsibleUsers()
-	{
+	function readResponsibleUsers() {
 		return false;
 	}
-
 }
 
 ?>

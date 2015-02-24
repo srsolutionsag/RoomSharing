@@ -12,37 +12,36 @@ require_once("./Customizing/global/plugins/Services/Repository/RepositoryObject/
  * PLEASE do not create instances of larger classes here. Use the
  * ...Access class to get DB data and keep it small.
  *
- * @author Thomas Matern <tmatern@stud.hs-bremen.de>
+ * @author  Thomas Matern <tmatern@stud.hs-bremen.de>
  *
  * @version $Id$
  */
-class ilObjRoomSharingListGUI extends ilObjectPluginListGUI
-{
+class ilObjRoomSharingListGUI extends ilObjectPluginListGUI {
+
 	/**
 	 * Init type
 	 */
-	public function initType()
-	{
+	public function initType() {
 		$this->setType("xrs");
 	}
+
 
 	/**
 	 * Get name of gui class handling the commands
 	 *
 	 * @return String
 	 */
-	public function getGuiClass()
-	{
+	public function getGuiClass() {
 		return "ilObjRoomSharingGUI";
 	}
+
 
 	/**
 	 * Get commands for the room sharing pool.
 	 *
 	 * @return array with commands
 	 */
-	public function initCommands()
-	{
+	public function initCommands() {
 		$this->static_link_enabled = true;
 		$this->delete_enabled = true;
 		$this->cut_enabled = true;
@@ -57,21 +56,24 @@ class ilObjRoomSharingListGUI extends ilObjectPluginListGUI
 
 		// general commands array
 		$this->commands = ilObjRoomSharingAccess::_getCommands();
+
 		return $this->commands;
 	}
 
-	public function getProperties()
-	{
+
+	public function getProperties() {
 		global $lng;
 
 		$props = array();
 
-		if (!ilObjRoomSharing::_lookupOnline($this->obj_id))
-		{
-			$props[] = array("alert" => true, "property" => $lng->txt("status"),
-				"value" => $lng->txt("offline"));
+		if (!ilObjRoomSharing::_lookupOnline($this->obj_id)) {
+			$props[] = array(
+				"alert" => true,
+				"property" => $lng->txt("status"),
+				"value" => $lng->txt("offline")
+			);
 		}
+
 		return $props;
 	}
-
 }

@@ -14,7 +14,7 @@ require_once("Customizing/global/plugins/Services/Repository/RepositoryObject/Ro
  * @author  mdazjuk
  * @author  troehrig
  *
- * @author Fabian Schmid <fs@studer-raimann.ch>
+ * @author  Fabian Schmid <fs@studer-raimann.ch>
  *
  * @version $Id$
  * @property ilDB $ilDB
