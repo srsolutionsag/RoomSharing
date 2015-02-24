@@ -268,7 +268,8 @@ class ilRoomSharingMailer extends ilMailNotification
 	{
 		foreach ($a_booking_ids as $booking_id)
 		{
-			$this->bookings[] = $this->ilRoomSharingDatabase->getBooking($booking_id)[0];
+			$type = $this->ilRoomSharingDatabase->getBooking($booking_id);
+			$this->bookings[] = $type[0];
 		}
 		$this->composeAndSendParticipationCancelMail($a_user_id);
 	}
@@ -284,7 +285,8 @@ class ilRoomSharingMailer extends ilMailNotification
 	{
 		foreach ($a_booking_ids as $booking_id)
 		{
-			$this->bookings[0] = $this->ilRoomSharingDatabase->getBooking($booking_id)[0];
+			$type = $this->ilRoomSharingDatabase->getBooking($booking_id);
+			$this->bookings[0] = $type[0];
 			$this->composeAndSendParticipationCancelMailForCreator($a_user_id, $this->bookings[0]['user_id']);
 		}
 	}
@@ -512,10 +514,10 @@ class ilRoomSharingMailer extends ilMailNotification
 	public function sendCancellationMail($a_user_id, array
 	$a_participants_ids)
 	{
-		$this->composeAndSendCancellationMailToCreator($a_user_id);
+		$this->composeAndSendCancellationMailToCreator($a_user_id, NULL);
 		foreach (array_unique($a_participants_ids) as $participant_id)
 		{
-			$this->composeAndSendCancellationMailToParticipant($participant_id);
+			$this->composeAndSendCancellationMailToParticipant($participant_id, NULL);
 		}
 	}
 

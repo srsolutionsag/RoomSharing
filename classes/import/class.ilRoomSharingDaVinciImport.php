@@ -362,8 +362,9 @@ class ilRoomSharingDaVinciImport {
                 $entry['to']['time']=  date_format($end, 'H:i:s');
                 $entry['book_public'] = '0';
                 $entry['accept_room_rules'] = '1';
-                
-                $entry['room'] = $this->ilRoomSharingDatabase->getRoomWithName($room)[0]['id'];
+
+	            $roomWithName = $this->ilRoomSharingDatabase->getRoomWithName($room);
+	            $entry['room'] = $roomWithName[0]['id'];
                 $entry['comment'] = $this->lng->txt("rep_robj_xrs_daVinci_import_tag");
                 $entry['cal_id'] = $this->parent_obj->getCalendarId();
 
@@ -375,8 +376,10 @@ class ilRoomSharingDaVinciImport {
                 {
                     $aBooking = $this->ilRoomSharingDatabase->getBookingIdForRoomInDateTimeRange($entry['from']['date'] . " "  . $entry['from']['time'], $entry['to']['date'] . " "  . $entry['to']['time'], $entry['room'],
                             0);
-                   
-                    if ($aBooking === array() || $this->ilRoomSharingDatabase->getBooking($aBooking[0])['bookingcomment'] !== $this->lng->txt("rep_robj_xrs_daVinci_import_tag"))
+
+	                $booking = $this->ilRoomSharingDatabase->getBooking($aBooking[0]);
+	                $booking1 = $this->ilRoomSharingDatabase->getBooking($aBooking[0]);
+	                if ($aBooking === array() || $booking['bookingcomment'] !== $this->lng->txt("rep_robj_xrs_daVinci_import_tag"))
                     {
                         try {
                             $this->book->addBooking($entry,array(),array(),array(),false);
@@ -385,7 +388,7 @@ class ilRoomSharingDaVinciImport {
                             
                         }
                     }
-                    elseif ($this->ilRoomSharingDatabase->getBooking($aBooking[0])['bookingcomment'] === $this->lng->txt("rep_robj_xrs_daVinci_import_tag")) {
+                    elseif ($booking1['bookingcomment'] === $this->lng->txt("rep_robj_xrs_daVinci_import_tag")) {
                             $newBookingValues = $this->ilRoomSharingDatabase->getBooking($aBooking[0]);
                             $newBookingValues['subject'] = $newBookingValues['subject'] . ' & ' . $subject . ' ' . $prof;
                             $newBookingValues['from'] = $entry['from'];

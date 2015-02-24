@@ -71,7 +71,8 @@ class ilRoomSharingCalendar extends ilMiniCalendarGUI
 		}
 
 		//if there was no calendar-category before or the calendar was deleted
-		if ($this->cal_cat_id == 0 || !isset($cats->getCategoriesInfo()[$this->cal_cat_id]))
+		$categoriesInfo = $cats->getCategoriesInfo();
+		if ($this->cal_cat_id == 0 || !isset($categoriesInfo[$this->cal_cat_id]))
 		{
 			//create a new calendar-category
 			$this->cal_cat_id = $this->createBookingsCalendarCategory();

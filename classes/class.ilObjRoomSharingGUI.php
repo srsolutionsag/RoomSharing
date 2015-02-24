@@ -541,8 +541,10 @@ class ilObjRoomSharingGUI extends ilObjectPluginGUI
 			$this->object->setOnline($this->settingsForm->getInput('online'));
 
 			// Max book time
-			$date = $this->settingsForm->getInput('max_book_time')['date'];
-			$time = $this->settingsForm->getInput('max_book_time')['time'];
+			$input = $this->settingsForm->getInput('max_book_time');
+			$date = $input['date'];
+			$input1 = $this->settingsForm->getInput('max_book_time');
+			$time = $input1['time'];
 			$this->object->setMaxBookTime($date . " " . $time);
 
 			// Rooms agreement

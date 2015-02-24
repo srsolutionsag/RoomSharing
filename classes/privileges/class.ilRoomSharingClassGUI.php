@@ -393,7 +393,8 @@ class ilRoomSharingClassGUI
 	 */
 	private function removeCurrentClassNameFromClassNamesArray($a_all_class_names)
 	{
-		$current_class_name = $this->privileges->getClassById($this->class_id)["name"];
+		$classById = $this->privileges->getClassById($this->class_id);
+		$current_class_name = $classById["name"];
 		$key = array_search($current_class_name, $a_all_class_names);
 		if (isset($key))
 		{

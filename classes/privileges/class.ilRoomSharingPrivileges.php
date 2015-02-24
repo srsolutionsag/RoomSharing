@@ -270,7 +270,8 @@ class ilRoomSharingPrivileges
 		$this->classes_privileges = $this->getAllClassPrivileges();
 		foreach ($user_classes as $user_class)
 		{
-			if ($this->getClassById($user_class)['locked'] == 1)
+			$classById = $this->getClassById($user_class);
+			if ($classById['locked'] == 1)
 			{
 				continue;
 			}

@@ -39,7 +39,8 @@ class ilRoomSharingCalendarScheduleExportTableGUI extends ilTable2GUI
 		parent::__construct($a_parent_obj, $a_parent_cmd);
 		$this->disable('action');
 
-		$elements = $this->calendarWeekGUI->buildAppointmentsArray()[0];
+		$buildAppointmentsArray = $this->calendarWeekGUI->buildAppointmentsArray();
+		$elements = $buildAppointmentsArray[0];
 		$element = $elements[1];
 		$this->setTitle(
 			$lng->txt("rep_robj_xrs_room_occupation_title") . " "
@@ -78,7 +79,8 @@ class ilRoomSharingCalendarScheduleExportTableGUI extends ilTable2GUI
 	{
 		$width1 = "9%";
 		$this->addColumn($this->lng->txt("time"), "", $width1, FALSE, "", "");
-		$elements = $this->calendarWeekGUI->buildAppointmentsArray()[0];
+		$buildAppointmentsArray = $this->calendarWeekGUI->buildAppointmentsArray();
+		$elements = $buildAppointmentsArray[0];
 		$width2 = "13%";
 		for ($i = 1; $i < 8; $i++)
 		{

@@ -479,8 +479,9 @@ class ilRoomSharingPrivilegesGUI
 
 		foreach ($new_locked_class_ids as $class_id)
 		{
+			$classById = $this->privileges->getClassById($class_id);
 			$confirmation_dialog->addItem("new_locked_class_ids", "",
-				$this->privileges->getClassById($class_id)["name"]);
+				$classById["name"]);
 		}
 		$confirmation_dialog->addHiddenItem("locked_classes", json_encode($a_class_ids_of_ticked_locks));
 
@@ -566,7 +567,8 @@ class ilRoomSharingPrivilegesGUI
 
 		foreach ($own_class_ids_to_be_locked as $class_id)
 		{
-			$own_class_names_to_be_locked[] = $this->privileges->getClassById($class_id)["name"];
+			$classById = $this->privileges->getClassById($class_id);
+			$own_class_names_to_be_locked[] = $classById["name"];
 		}
 
 		return $own_class_names_to_be_locked;
@@ -658,7 +660,8 @@ class ilRoomSharingPrivilegesGUI
 
 		foreach ($endangered_class_ids as $class_id)
 		{
-			$confirmation_dialog->addItem("", "", $this->privileges->getClassById($class_id)["name"]);
+			$classById = $this->privileges->getClassById($class_id);
+			$confirmation_dialog->addItem("", "", $classById["name"]);
 		}
 		$post_privileges = htmlspecialchars(json_encode($a_classes_with_ticked_privileges));
 		$confirmation_dialog->addHiddenItem("confirmed_privileges", $post_privileges);
