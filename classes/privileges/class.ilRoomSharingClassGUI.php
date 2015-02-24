@@ -79,7 +79,8 @@ class ilRoomSharingClassGUI {
 		$this->tpl->setTitle($class_info["name"]);
 		$description = $class_info["description"];
 		$this->tpl->setDescription($description);
-		$this->tpl->setTitleIcon(ilUtil::getImagePath("icon_role_b.png"), $this->lng->txt("rep_robj_xrs_class"));
+//		$this->tpl->setTitleIcon(ilUtil::getImagePath("icon_role_b.png"), $this->lng->txt("rep_robj_xrs_class"));
+		$this->tpl->setTitleIcon(ilUtil::getImagePath("icon_role_b.svg"), $this->lng->txt("rep_robj_xrs_class"));
 		$this->setTabs();
 	}
 

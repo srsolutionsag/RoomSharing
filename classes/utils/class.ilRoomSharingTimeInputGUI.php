@@ -78,6 +78,14 @@ class ilRoomSharingTimeInputGUI extends ilDateTimeInputGUI {
 
 		return (bool)$dt;
 	}
+
+
+	/**
+	 * @param bool $set
+	 */
+	public function setShowDate($set) {
+		$this->showtime = $set;
+	}
 }
 
 ?>
