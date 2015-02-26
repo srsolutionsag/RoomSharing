@@ -103,6 +103,9 @@ class ilRoomSharingSearchFormGUI extends ilPropertyFormGUI {
 	}
 
 
+	/**
+	 * @param $freq
+	 */
 	private function handleSeriesBookingInformations($freq) {
 		switch ($freq) {
 			case 'DAILY':

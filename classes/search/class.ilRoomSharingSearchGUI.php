@@ -86,7 +86,7 @@ class ilRoomSharingSearchGUI {
 		$search_form = $this->createForm();
 
 		// continue only if the input data is correct
-		if ($search_form->checkInput() && $this->checkTime($search_form)) {
+		if ($search_form->checkInput() AND $this->checkTime($search_form)) {
 			$search_form->writeInputsToSession();
 			$this->showSearchResults();
 		} else // otherwise return to the form and display an error messages if needed
@@ -340,7 +340,7 @@ class ilRoomSharingSearchGUI {
 		$time_from_given = unserialize($_SESSION ["form_searchform"] ["time_from"]);
 		$time_to_given = unserialize($_SESSION ["form_searchform"] ["time_to"]);
 
-		if ($this->isNoTimeSet($time_from_given['time'])) {
+		if (!$this->isNoTimeSet($time_from_given['time'])) {
 			$current_date_time_array = $this->getCurrentTime();
 			$time_from_given['time'] = $current_date_time_array['time']['from'];
 			$time_to_given['time'] = $current_date_time_array['time']['to'];
@@ -351,7 +351,6 @@ class ilRoomSharingSearchGUI {
 		if (!empty($time_from_given['date']) && !empty($time_from_given['time'])) {
 			$time_from->setDate(new ilDate($time_from_given['date'] . ' ' . $time_from_given['time'], IL_CAL_DATETIME, $ilUser->getTimeZone()));
 		}
-
 		$time_comb->addCombinationItem("time_from", $time_from, $this->lng->txt("rep_robj_xrs_between"));
 		$time_to = new ilRoomSharingTimeInputGUI("", "time_to");
 		$time_to->setShowTime(true);
