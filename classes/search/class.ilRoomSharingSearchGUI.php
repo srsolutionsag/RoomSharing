@@ -340,13 +340,13 @@ class ilRoomSharingSearchGUI {
 		$time_from_given = unserialize($_SESSION ["form_searchform"] ["time_from"]);
 		$time_to_given = unserialize($_SESSION ["form_searchform"] ["time_to"]);
 
-		if (!$this->isNoTimeSet($time_from_given['time'])) {
+//		if (!$this->isNoTimeSet($time_from_given['time'])) {
 			$current_date_time_array = $this->getCurrentTime();
 			$time_from_given['time'] = $current_date_time_array['time']['from'];
 			$time_to_given['time'] = $current_date_time_array['time']['to'];
 			$time_from_given['date'] = $current_date_time_array['date']['from'];
 			$time_to_given['date'] = $current_date_time_array['date']['to'];
-		}
+//		}
 
 		if (!empty($time_from_given['date']) && !empty($time_from_given['time'])) {
 			$time_from->setDate(new ilDate($time_from_given['date'] . ' ' . $time_from_given['time'], IL_CAL_DATETIME, $ilUser->getTimeZone()));
