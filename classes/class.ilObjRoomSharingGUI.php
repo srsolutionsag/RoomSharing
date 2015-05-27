@@ -334,7 +334,7 @@ class ilObjRoomSharingGUI extends ilObjectPluginGUI {
 	private function getAlertProperties() {
 		global $lng;
 		$alert_props = array();
-		if (!$this->object->isOnline()) {
+		if (! $this->object->isOnline()) {
 			$alert_props[] = array(
 				"alert" => true,
 				"property" => $lng->txt("status"),
@@ -462,7 +462,7 @@ class ilObjRoomSharingGUI extends ilObjectPluginGUI {
 	 * This command uses the form class to display an input form.
 	 */
 	protected function editSettings() {
-		if (!$this->permission->checkPrivilege(PRIVC::ACCESS_SETTINGS)) {
+		if (! $this->permission->checkPrivilege(PRIVC::ACCESS_SETTINGS)) {
 			$this->setActiveTabRegardingPrivilege();
 
 			return false;
@@ -480,7 +480,7 @@ class ilObjRoomSharingGUI extends ilObjectPluginGUI {
 	 * This command uses the form class to display an input form.
 	 */
 	protected function updateSettings() {
-		if (!$this->permission->checkPrivilege(PRIVC::ACCESS_SETTINGS)) {
+		if (! $this->permission->checkPrivilege(PRIVC::ACCESS_SETTINGS)) {
 			$this->setActiveTabRegardingPrivilege();
 
 			return false;
@@ -496,12 +496,15 @@ class ilObjRoomSharingGUI extends ilObjectPluginGUI {
 			// Online flag
 			$this->object->setOnline($this->settingsForm->getInput('online'));
 
-			// Max book time
-			$input = $this->settingsForm->getInput('max_book_time');
-			$date = $input['date'];
-			$input1 = $this->settingsForm->getInput('max_book_time');
-			$time = $input1['time'];
-			$this->object->setMaxBookTime($date . " " . $time);
+			//			 Max book time
+			//			$input = $this->settingsForm->getInput('max_book_time');
+			//			$date = $input['date'];
+			//			$input1 = $this->settingsForm->getInput('max_book_time');
+			//			$time = $input1['time'];
+			//			$this->object->setMaxBookTime($date . " " . $time);
+
+			$date = xrsTimeInputGUI::getInputAsDateTime($this->settingsForm->getInput('max_book_time'));
+			$this->object->setMaxBookTime('000-00-00 ' . $date->format('H:i:s'));
 
 			// Rooms agreement
 			$roomAgreementAcceptable = true;
@@ -572,11 +575,15 @@ class ilObjRoomSharingGUI extends ilObjectPluginGUI {
 		$this->settingsForm->addItem($onlineField);
 
 		// Max booking time
-		$maxtimeField = new ilRoomSharingTimeInputGUI($this->lng->txt('rep_robj_xrs_max_book_time'), 'max_book_time');
-		$maxtimeField->setShowTime(true);
-		$maxtimeField->setMinuteStepSize(5);
-		$maxtimeField->setShowDate(false);
-		$this->settingsForm->addItem($maxtimeField);
+		//		$maxtimeField = new ilRoomSharingTimeInputGUI($this->lng->txt('rep_robj_xrs_max_book_time'), 'max_book_time');
+		//		$maxtimeField->setShowTime(true);
+		//		$maxtimeField->setMinuteStepSize(5);
+		//		$maxtimeField->setShowDate(false);
+		//		$this->settingsForm->addItem($maxtimeField);
+
+		require_once('./Customizing/global/plugins/Services/Repository/RepositoryObject/RoomSharing/classes/utils/class.xrsTimeInputGUI.php');
+		$xrsTimeInputGUI = new xrsTimeInputGUI($this->lng->txt('rep_robj_xrs_max_book_time'), 'max_book_time');
+		$this->settingsForm->addItem($xrsTimeInputGUI);
 
 		// Rooms agreement
 		$roomsAgrField = new ilFileInputGUI($this->lng->txt('rep_robj_xrs_rooms_user_agreement'), "rooms_agreement");
@@ -603,10 +610,11 @@ class ilObjRoomSharingGUI extends ilObjectPluginGUI {
 		$values ['online'] = $this->object->isOnline();
 
 		// Max book time
-		$timestamp = strtotime($this->object->getMaxBookTime());
-		$maxDate = date("Y-m-d", $timestamp);
-		$maxTime = date("H:i:s", $timestamp);
-		$values ['max_book_time'] = array( 'date' => $maxDate, 'time' => $maxTime );
+		//		$timestamp = strtotime($this->object->getMaxBookTime());
+		//		$maxDate = date("Y-m-d", $timestamp);
+		//		$maxTime = date("H:i:s", $timestamp);
+		//		$values ['max_book_time'] = array( 'date' => $maxDate, 'time' => $maxTime );
+		$values ['max_book_time'] = $this->object->getMaxBookTime();
 
 		/* Rooms agreement */
 		$values ['rooms_agreement'] = $this->getRoomAgreementLink();
@@ -623,7 +631,7 @@ class ilObjRoomSharingGUI extends ilObjectPluginGUI {
 	private function getRoomAgreementLink() {
 		$linkPresentation = "";
 		$fileId = $this->object->getRoomsAgreementFileId();
-		if (!empty($fileId) && $fileId != "0") {
+		if (! empty($fileId) && $fileId != "0") {
 			$agreementFile = new ilObjMediaObject($fileId);
 			$media = $agreementFile->getMediaItem("Standard");
 			$source = $agreementFile->getDataDirectory() . "/" . $media->getLocation();
