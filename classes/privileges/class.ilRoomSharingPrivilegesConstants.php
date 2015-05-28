@@ -1,7 +1,7 @@
 <?php
 
-class ilRoomSharingPrivilegesConstants
-{
+class ilRoomSharingPrivilegesConstants {
+
 	const ACCESS_APPOINTMENTS = 'accessAppointments';
 	const ACCESS_SEARCH = 'accessSearch';
 	const ADD_OWN_BOOKINGS = 'addOwnBookings';
@@ -30,7 +30,6 @@ class ilRoomSharingPrivilegesConstants
 	const EDIT_PRIVILEGES = 'editPrivileges';
 	const LOCK_PRIVILEGES = 'lockPrivileges';
 	const ACCESS_IMPORT = 'accessImport';
-
 }
 
 ?>

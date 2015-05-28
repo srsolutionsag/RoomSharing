@@ -5,8 +5,8 @@
  *
  * @author Malte Ahlering
  */
-class ilRoomSharingDBConstants
-{
+class ilRoomSharingDBConstants {
+
 	const BOOKING_ATTRIBUTES_TABLE = 'rep_robj_xrs_battr';
 	const BOOKINGS_TABLE = 'rep_robj_xrs_bookings';
 	const BOOKING_TO_ATTRIBUTE_TABLE = 'rep_robj_xrs_book_attr';
@@ -22,5 +22,4 @@ class ilRoomSharingDBConstants
 	const CLASSES_TABLE = 'rep_robj_xrs_classes';
 	const CLASS_USER_TABLE = 'rep_robj_xrs_cls_user';
 	const CLASS_PRIVILEGES_TABLE = 'rep_robj_xrs_cls_priv';
-
 }

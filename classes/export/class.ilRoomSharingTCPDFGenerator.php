@@ -9,16 +9,15 @@ require_once('./Services/PDFGeneration/classes/tcpdf/tcpdf.php');
  *
  * @author MartinDoser
  */
-class ilRoomSharingTCPDFGenerator extends ilTCPDFGenerator
-{
+class ilRoomSharingTCPDFGenerator extends ilTCPDFGenerator {
+
 	/**
 	 * Method creates a PDF in landscape mode, using ilPDFGeneration Job
 	 * Rest of method similar to superclass method
 	 *
 	 * @param ilPDFGenerationJob $job
 	 */
-	public static function generatePDF(ilPDFGenerationJob $job)
-	{
+	public static function generatePDF(ilPDFGenerationJob $job) {
 		// create new PDF document
 		// 'L' for Landscape
 		$pdf = new TCPDF('L', PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -30,8 +29,8 @@ class ilRoomSharingTCPDFGenerator extends ilTCPDFGenerator
 		$pdf->SetSubject($job->getSubject());
 		$pdf->SetKeywords($job->getKeywords());
 
-		$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
-		$pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+		$pdf->setHeaderFont(Array( PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN ));
+		$pdf->setFooterFont(Array( PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA ));
 		$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 		$pdf->SetMargins($job->getMarginLeft(), $job->getMarginTop(), $job->getMarginRight());
 		$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
@@ -40,14 +39,11 @@ class ilRoomSharingTCPDFGenerator extends ilTCPDFGenerator
 		$pdf->setImageScale($job->getImageScale());
 		$pdf->SetFont('dejavusans', '', 10);
 
-
-		foreach ($job->getPages() as $page)
-		{
+		foreach ($job->getPages() as $page) {
 			$pdf->AddPage();
 			$pdf->writeHTML($page, true, false, true, false, '');
 		}
 
 		$result = $pdf->Output($job->getFilename(), $job->getOutputMode()); // (I - Inline, D - Download, F - File)
 	}
-
 }

@@ -5,8 +5,8 @@
  *
  * @author Thomas Matern <tmatern@stud.hs-bremen.de>
  */
-class ilRoomSharingAttributesConstants
-{
+class ilRoomSharingAttributesConstants {
+
 	const MAX_NAME_LENGTH = 45;
 	const ACTION_MODE = 'radio_action_mode';
 	const AVAILABLE_NAMES = 'available_attributes_names';
@@ -28,6 +28,6 @@ class ilRoomSharingAttributesConstants
 	const CREATE_MODE = 'create_attribute';
 	const RENAME_MODE = 'rename_attribute';
 	const DELETE_MODE = 'delete_attribute';
-
 }
+
 ?>

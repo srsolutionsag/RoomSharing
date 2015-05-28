@@ -11,21 +11,19 @@ require_once 'class.ilRoomSharingTCPDFGenerator.php';
  *
  * @author MartinDoser
  */
-class ilRoomSharingPDFGeneration extends ilPDFGeneration
-{
+class ilRoomSharingPDFGeneration extends ilPDFGeneration {
+
 	/**
 	 * Method executes ilPDFGenerationJob
 	 * calls custom method ilRoomSharingTCPDFGenerator to generate PDFs in landscape orientation
 	 *
 	 * @param ilPDFGenerationJob $job
 	 */
-	public static function doJob(ilPDFGenerationJob $job)
-	{
+	public static function doJob(ilPDFGenerationJob $job) {
 		/*
 		 * This place currently supports online the TCPDF-Generator. In future versions/iterations, this place
 		 * may serve to initialize other mechanisms and route jobs to them.
 		 */
 		ilRoomSharingTCPDFGenerator::generatePDF($job);
 	}
-
 }

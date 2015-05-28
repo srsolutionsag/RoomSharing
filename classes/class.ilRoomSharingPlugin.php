@@ -5,22 +5,19 @@ include_once("./Services/Repository/classes/class.ilRepositoryObjectPlugin.php")
 /**
  * RoomSharing repository object plugin
  *
- * @author troehrig 
+ * @author  troehrig
  * @version $Id$
- * 
+ *
  *
  */
-class ilRoomSharingPlugin extends ilRepositoryObjectPlugin
-{
+class ilRoomSharingPlugin extends ilRepositoryObjectPlugin {
 
 	/**
 	 * Get name of the Plugin
-	 * 
+	 *
 	 * @return String
 	 */
-	function getPluginName()
-	{
+	function getPluginName() {
 		return "RoomSharing";
 	}
-
 }
