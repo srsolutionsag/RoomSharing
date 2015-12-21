@@ -13,6 +13,11 @@ include_once("./Services/Table/interfaces/interface.ilTableFilterItem.php");
 class ilRoomSharingTimeInputGUI extends ilDateTimeInputGUI {
 
 	/**
+	 * @var bool
+	 */
+	protected $show_date = false;
+
+	/**
 	 * Constructor of ilRoomSharingTimeInputGUI; an own take on of the
 	 * ilDateTimeInputGUI. It is solely used for time inputs.
 	 *
@@ -21,6 +26,7 @@ class ilRoomSharingTimeInputGUI extends ilDateTimeInputGUI {
 	 */
 	function __construct($a_title = "", $a_postvar = "") {
 		parent::__construct($a_title, $a_postvar);
+		$this->mode = self::MODE_SELECT;
 	}
 
 
@@ -86,6 +92,54 @@ class ilRoomSharingTimeInputGUI extends ilDateTimeInputGUI {
 	public function setShowDate($set) {
 		$this->show_date = $set;
 	}
+
+
+	function render()
+	{
+		global $ilUser;
+
+		$tpl = new ilTemplate("tpl.prop_datetime.html", true, true, "Services/Form");
+		$tpl->setCurrentBlock("prop_time");
+
+		if($this->getMode() == self::MODE_SELECT)
+		{
+			if(is_a($this->getDate(),'ilDate'))
+			{
+				$date_info = $this->getDate()->get(IL_CAL_FKT_GETDATE,'','UTC');
+			}
+			elseif(is_a($this->getDate(),'ilDateTime'))
+			{
+				$date_info = $this->getDate()->get(IL_CAL_FKT_GETDATE,'',$ilUser->getTimeZone());
+			}
+			else
+			{
+				$this->setDate(new ilDateTime(time(), IL_CAL_UNIX));
+				$date_info = $this->getDate()->get(IL_CAL_FKT_GETDATE,'',$ilUser->getTimeZone());
+			}
+
+			// display invalid input again
+			if(is_array($this->invalid_input))
+			{
+				$date_info['year'] = $this->invalid_input['y'];
+				$date_info['mon'] = $this->invalid_input['m'];
+				$date_info['mday'] = $this->invalid_input['d'];
+			}
+		}
+
+		if($this->getMode() == self::MODE_SELECT)
+		{
+			$tpl->setVariable("TIME_SELECT",
+				ilUtil::makeTimeSelect($this->getPostVar()."[time]", !$this->getShowSeconds(),
+					$date_info['hours'], $date_info['minutes'], $date_info['seconds'],
+					true,array('minute_steps' => $this->getMinuteStepSize(),
+						'disabled' => $this->getDisabled())));
+		}
+
+		$tpl->parseCurrentBlock();
+		return $tpl->get();
+	}
+
+
 }
 
 ?>

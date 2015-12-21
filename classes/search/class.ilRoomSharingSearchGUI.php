@@ -336,7 +336,6 @@ class ilRoomSharingSearchGUI {
 		$time_from->setShowTime(true);
 		$time_from->setShowDate(false);
 		$time_from->setMinuteStepSize(5);
-
 		$time_from_given = unserialize($_SESSION ["form_searchform"] ["time_from"]);
 		$time_to_given = unserialize($_SESSION ["form_searchform"] ["time_to"]);
 
