@@ -139,14 +139,14 @@ class ilObjRoomSharingGUI extends ilObjectPluginGUI {
 		 * otherwise the wrong $next_class would be called
 		 */ else {
 				if ($cmd === 'showSearch' || $cmd === 'showBookSearchResults' || $cmd === "showSearchResults") {
-					$next_class = empty($next_class) ? ilroomsharingsearchgui : $next_class;
+					$next_class = empty($next_class) ? 'ilroomsharingsearchgui' : $next_class;
 				} // the special handling of the commands addRoom and editRoom
 				else {
 					if ($cmd === 'addRoom' || $cmd === 'editRoom') {
-						$next_class = ilroomsharingroomgui;
+						$next_class = 'ilroomsharingroomgui';
 					} else {
 						if ($cmd == 'showBookings') {
-							$next_class = ilroomsharingappointmentsgui;
+							$next_class = 'ilroomsharingappointmentsgui';
 						}
 					}
 				}

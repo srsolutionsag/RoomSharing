@@ -12,6 +12,8 @@ include_once("./Services/Repository/classes/class.ilRepositoryObjectPlugin.php")
  */
 class ilRoomSharingPlugin extends ilRepositoryObjectPlugin {
 
+	private static $instance;
+
 	/**
 	 * Get name of the Plugin
 	 *
@@ -19,5 +21,22 @@ class ilRoomSharingPlugin extends ilRepositoryObjectPlugin {
 	 */
 	function getPluginName() {
 		return "RoomSharing";
+	}
+
+
+    /**
+     * @return ilRoomSharingPlugin
+     */
+	public static function getInstance()
+	{
+		if (static::$instance === null) {
+			static::$instance = new static();
+		}
+
+		return static::$instance;
+	}
+
+	protected function uninstallCustom()
+	{
 	}
 }

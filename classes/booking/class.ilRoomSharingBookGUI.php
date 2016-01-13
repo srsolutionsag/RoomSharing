@@ -415,7 +415,6 @@ class ilRoomSharingBookGUI {
 		$attribute_entries = $this->fetchAttributeFormEntries($a_form);
 		$participant_entries = $a_form->getInput('participants');
 		$recurrence_entries = $this->fetchRecurrenceFormEntries($a_form);
-
 		$this->saveFormEntries($a_form, $common_entries, $attribute_entries, $participant_entries, $recurrence_entries);
 	}
 

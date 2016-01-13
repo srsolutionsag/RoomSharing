@@ -16,6 +16,9 @@ class ilRoomSharingDatabaseBooking {
 
 	private $pool_id;
 	private $ilDB;
+	/**
+	 * @var ilRoomSharingDatabase
+	 */
 	private $ilRoomSharingDatabase;
 
 

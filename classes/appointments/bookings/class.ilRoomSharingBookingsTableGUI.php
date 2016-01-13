@@ -32,6 +32,7 @@ class ilRoomSharingBookingsTableGUI extends ilTable2GUI {
 	protected $lng;
 	protected $ctrl;
 	protected $parent_obj;
+	protected $pl;
 	private $permission;
 	private $bookings;
 	private $ref_id;
@@ -50,7 +51,7 @@ class ilRoomSharingBookingsTableGUI extends ilTable2GUI {
 		$this->permission = $rssPermission;
 		$this->lng = $lng;
 		$this->ctrl = $ilCtrl;
-
+		$this->pl = ilRoomSharingPlugin::getInstance();
 		$this->parent_obj = $a_parent_obj;
 		$this->ref_id = $a_ref_id;
 		$this->setId("roomobj");
@@ -256,7 +257,7 @@ class ilRoomSharingBookingsTableGUI extends ilTable2GUI {
 	private function setRecurrence($a_rowData) {
 		if ($a_rowData ['recurrence']) {
 			// icon for the recurrence date
-			$this->tpl->setVariable('IMG_RECURRENCE_PATH', ilUtil::getImagePath("cmd_move_s.png"));
+			$this->tpl->setVariable('IMG_RECURRENCE_PATH', $this->pl->getImagePath('recurrent.svg'));
 		}
 		$this->tpl->setVariable('IMG_RECURRENCE_TITLE', $this->lng->txt("rep_robj_xrs_room_date_recurrence"));
 	}

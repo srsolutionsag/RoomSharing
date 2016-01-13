@@ -225,27 +225,29 @@ class ilRoomSharingRoomGUI {
 		$floor_plan->setDisabled(true);
 		$form_gui->addItem($floor_plan);
 
-		$defined_attributes = $this->room_obj->getAttributes();
-		$show_mode_with_exist_attrs = (($a_mode == "show") && count($defined_attributes) > 0);
+		if (count($this->room_obj->getAllAvailableAttributes())) {
+			$defined_attributes = $this->room_obj->getAttributes();
+			$show_mode_with_exist_attrs = (($a_mode == "show") && count($defined_attributes) > 0);
 
-		if (($a_mode == "edit") || ($a_mode == "create") || $show_mode_with_exist_attrs) {
-			$attributes_header = new ilFormSectionHeaderGUI();
-			$attribute_header_text = $this->createAttributeHeaderText();
-			$attributes_header->setTitle($this->lng->txt("rep_robj_xrs_room_attributes") . $attribute_header_text);
-			$form_gui->addItem($attributes_header);
-		}
+			if (($a_mode == "edit") || ($a_mode == "create") || $show_mode_with_exist_attrs) {
+				$attributes_header = new ilFormSectionHeaderGUI();
+				$attribute_header_text = $this->createAttributeHeaderText();
+				$attributes_header->setTitle($this->lng->txt("rep_robj_xrs_room_attributes") . $attribute_header_text);
+				$form_gui->addItem($attributes_header);
+			}
 
-		foreach ($this->room_obj->getAllAvailableAttributes() as $attr) {
-			$attribute_amount_by_id = $this->room_obj->getAttributeAmountById($attr['id']);
-			$amount_not_given = !ilRoomSharingNumericUtils::isPositiveNumber($attribute_amount_by_id, true);
-			if ($a_mode == "show" && $amount_not_given) {
-				continue;
-			} else {
-				$attr_field = new ilRoomSharingNumberInputGUI($attr['name'], self::ATTRIBUTE_ID_PREFIX . $attr['id']);
-				$attr_field->setValue($attribute_amount_by_id);
-				$attr_field->setMinValue(0);
-				$attr_field->setDisabled(($a_mode == "show"));
-				$form_gui->addItem($attr_field);
+			foreach ($this->room_obj->getAllAvailableAttributes() as $attr) {
+				$attribute_amount_by_id = $this->room_obj->getAttributeAmountById($attr['id']);
+				$amount_not_given = !ilRoomSharingNumericUtils::isPositiveNumber($attribute_amount_by_id, true);
+				if ($a_mode == "show" && $amount_not_given) {
+					continue;
+				} else {
+					$attr_field = new ilRoomSharingNumberInputGUI($attr['name'], self::ATTRIBUTE_ID_PREFIX . $attr['id']);
+					$attr_field->setValue($attribute_amount_by_id);
+					$attr_field->setMinValue(0);
+					$attr_field->setDisabled(($a_mode == "show"));
+					$form_gui->addItem($attr_field);
+				}
 			}
 		}
 
