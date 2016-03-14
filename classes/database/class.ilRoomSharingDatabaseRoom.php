@@ -202,7 +202,7 @@ class ilRoomSharingDatabaseRoom {
 	public function getRoomsBookedInDateTimeRange($a_datetimes_from, $a_datetimes_to, $a_room_id = NULL, $a_priority = NULL) {
 		$roomQuery = '';
 		if ($a_room_id) {
-			$roomQuery = ' room_id = ' . $this->ilDB->quote($a_room_id, 'text') . ' AND ';
+			$roomQuery = ' room_id = ' . $this->ilDB->quote($a_room_id, 'text');
 		}
 
 		$priorityQuery = '';
@@ -235,8 +235,11 @@ class ilRoomSharingDatabaseRoom {
 			$query = substr($query, 0, - 2);
 		}
 
-		if (!empty($roomQuery) || !empty($priorityQuery)) {
-			$query .= ' AND ' . $roomQuery . $priorityQuery;
+		if (!empty($roomQuery)) {
+			$query .= ' AND ' . $roomQuery;
+		}
+		if (!empty($priorityQuery)) {
+			$query .= ' AND ' . $priorityQuery;
 		}
 
 		$set = $this->ilDB->query($query);
